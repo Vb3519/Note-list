@@ -1,0 +1,75 @@
+<!-- 
+Вопросы-заметки к проекту (в конце документа html):
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes List</title>
+    <link rel="stylesheet" href="Style.css">    
+</head>
+<body>    
+    <h1>My Notes List</h1>
+    <div class="main-container">
+        <!-- Контейнер - таск лист -->
+        <div class="tasks-container">
+
+        <div class="task-body">
+            <div class="task-text-and-date-container">
+                <p class="task-text">Default note. My note about how im learn JS. 
+                    And another info about myself, my work, hobbies, lifestyle.
+                    Idk whatever. I like watch TV-shows. And somesething else.
+                </p>
+            <div class="task-date">00:00</div>
+            </div>
+            <div class="task-importance" data-description="Select importance<br> of current Note">[&gt;]</div> <!-- <br> - перенос строки -->
+            <div class="task-close-btn" data-closeNote="Close current note">[X]</div>            
+        </div>
+        </div>
+
+        <!-- Меню выбора важности таска -->
+        <div class="task-priority-container">
+            <div class="task-priority-menu-header">
+                Choose task priority:
+            </div>
+   
+            <div class="priority orange">
+                High
+            </div>
+    
+            <div class="priority blue">
+                Medium
+            </div>
+   
+            <div class="priority green">
+                Low
+            </div>
+   
+            <div class="priority standard">
+                Standard
+            </div>
+   
+            <div class="close-priority-menu priority">[close menu]</div>
+        </div>
+
+        <!-- Контейнер добавления таска -->
+        <div class="add-task-container">
+            <input type="text" name="text" placeholder="Type your task here...">
+            <button class="add-task-btn">Add Task</button>
+        </div>
+    </div>
+</body>
+<script src="Script.js"></script>
+</html>
+
+
+<!-- 
+Вопросы:
+
+№1 Текст выходит за рамки тела заметки:
+Что делать с текстом в заметках, если его много? Если вводить текст без пробелов - он выходит за пределы тела заметки и ломает верстку (с пробелами все ок).
+Установил "overflow: hidden", чтобы часть такого текста не показывалась, но отрисовка других элементов (которых нет изначально) всеравно ломается.
+
+-->
